@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NotiOfimaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="NotiOfimaDatos">
+    <Key>
+      <PropertyRef Name="idNota" />
+    </Key>
+    <Property Name="CantidadMostrar" Type="Int32" Nullable="false" />
+    <Property Name="FechaExpiracion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FrecuenciaMostrar" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
+    <Property Name="idNota" Type="Guid" Nullable="false" />
+    <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Titulo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="NotiOfimaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="NotiOfimaDatos" EntityType="NotiOfimaModel.NotiOfimaDatos" />
+  </EntityContainer>
+</Schema>

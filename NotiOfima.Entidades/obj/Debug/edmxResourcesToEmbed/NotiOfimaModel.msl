@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NotiOfimaModelStoreContainer" CdmEntityContainer="NotiOfimaEntities">
+    <EntitySetMapping Name="NotiOfimaDatos">
+      <EntityTypeMapping TypeName="NotiOfimaModel.NotiOfimaDatos">
+        <MappingFragment StoreEntitySet="NotiOfima">
+          <ScalarProperty Name="CodigoPais" ColumnName="CodigoPais" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="CantidadMostrar" ColumnName="CantidadMostrar" />
+          <ScalarProperty Name="FechaExpiracion" ColumnName="FechaExpiracion" />
+          <ScalarProperty Name="FrecuenciaMostrar" ColumnName="FrecuenciaMostrar" />
+          <ScalarProperty Name="idNota" ColumnName="idNota" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NotiOfimaConfiguracions">
+      <EntityTypeMapping TypeName="NotiOfimaModel.NotiOfimaConfiguracion">
+        <MappingFragment StoreEntitySet="NotiOfimaConfiguracion">
+          <ScalarProperty Name="tiempoInactivo" ColumnName="tiempoInactivo" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="UltimaEjecucion" ColumnName="UltimaEjecucion" />
+          <ScalarProperty Name="FrecuenciaMostrar" ColumnName="FrecuenciaMostrar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MTPAIS">
+      <EntityTypeMapping TypeName="NotiOfimaModel.MTPAI">
+        <MappingFragment StoreEntitySet="MTPAIS">
+          <ScalarProperty Name="DESCRIPCIO" ColumnName="DESCRIPCIO" />
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="NotiOfima.WebService.ServiceNotiOfima" CodeBehind="ServiceNotiOfima.svc.cs" %>

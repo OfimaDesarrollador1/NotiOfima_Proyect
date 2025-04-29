@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NotiOfimaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="MTPAIS">
+    <Key>
+      <PropertyRef Name="CODIGO" />
+    </Key>
+    <Property Name="CODIGO" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="DESCRIPCIO" Type="char" MaxLength="60" />
+  </EntityType>
+  <EntityType Name="NotiOfima">
+    <Key>
+      <PropertyRef Name="idNota" />
+    </Key>
+    <Property Name="CantidadMostrar" Type="int" Nullable="false" />
+    <Property Name="FechaExpiracion" Type="datetime" Nullable="false" />
+    <Property Name="FrecuenciaMostrar" Type="numeric" Precision="6" Scale="2" Nullable="false" />
+    <Property Name="idNota" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Link" Type="varchar(max)" Nullable="false" />
+    <Property Name="Titulo" Type="varchar(max)" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="Imagen" Type="image" />
+    <Property Name="CodigoPais" Type="varchar" MaxLength="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NotiOfimaConfiguracion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FrecuenciaMostrar" Type="int" Nullable="false" />
+    <Property Name="UltimaEjecucion" Type="datetime" Nullable="false" />
+    <Property Name="tiempoInactivo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="NotiOfimaModelStoreContainer">
+    <EntitySet Name="MTPAIS" EntityType="Self.MTPAIS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NotiOfima" EntityType="Self.NotiOfima" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NotiOfimaConfiguracion" EntityType="Self.NotiOfimaConfiguracion" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

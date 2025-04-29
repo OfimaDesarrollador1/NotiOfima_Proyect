@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SitiosCampusOfimaC>
+	<SitiosCampusOfima>
+		<urlCampus>http://campus.ofimapyme.com/</urlCampus>
+		<pais>CO</pais>
+		<esPyme>True</esPyme>
+	</SitiosCampusOfima>
+	<SitiosCampusOfima>
+		<urlCampus>http://campus.ofimaEnterprise.com/</urlCampus>
+		<pais>CO</pais>
+		<esPyme>False</esPyme>
+	</SitiosCampusOfima>
+	<SitiosCampusOfima>
+		<urlCampus>http://campus.ofimapymeMx.com/</urlCampus>
+		<pais>MX</pais>
+		<esPyme>True</esPyme>
+	</SitiosCampusOfima>
+	<SitiosCampusOfima>
+		<urlCampus>http://campus.ofimaEnterpriseMx.com/</urlCampus>
+		<pais>MX</pais>
+		<esPyme>False</esPyme>
+	</SitiosCampusOfima>
+</SitiosCampusOfimaC>

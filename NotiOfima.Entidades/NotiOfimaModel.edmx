@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="NotiOfimaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="MTPAIS">
+          <Key>
+            <PropertyRef Name="CODIGO" />
+          </Key>
+          <Property Name="CODIGO" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="DESCRIPCIO" Type="char" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="NotiOfima">
+          <Key>
+            <PropertyRef Name="idNota" />
+          </Key>
+          <Property Name="CantidadMostrar" Type="int" Nullable="false" />
+          <Property Name="FechaExpiracion" Type="datetime" Nullable="false" />
+          <Property Name="FrecuenciaMostrar" Type="numeric" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="idNota" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Link" Type="varchar(max)" Nullable="false" />
+          <Property Name="Titulo" Type="varchar(max)" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="Imagen" Type="image" />
+          <Property Name="CodigoPais" Type="varchar" MaxLength="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NotiOfimaConfiguracion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FrecuenciaMostrar" Type="int" Nullable="false" />
+          <Property Name="UltimaEjecucion" Type="datetime" Nullable="false" />
+          <Property Name="tiempoInactivo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="NotiOfimaModelStoreContainer">
+          <EntitySet Name="MTPAIS" EntityType="Self.MTPAIS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NotiOfima" EntityType="Self.NotiOfima" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NotiOfimaConfiguracion" EntityType="Self.NotiOfimaConfiguracion" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NotiOfimaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityType Name="NotiOfimaDatos">
+          <Key>
+            <PropertyRef Name="idNota" />
+          </Key>
+          <Property Name="CantidadMostrar" Type="Int32" Nullable="false" />
+          <Property Name="FechaExpiracion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FrecuenciaMostrar" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="idNota" Type="Guid" Nullable="false" />
+          <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Titulo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Imagen" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="CodigoPais" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="NotiOfimaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="NotiOfimaDatos" EntityType="NotiOfimaModel.NotiOfimaDatos" />
+          <EntitySet Name="NotiOfimaConfiguracions" EntityType="NotiOfimaModel.NotiOfimaConfiguracion" />
+          <EntitySet Name="MTPAIS" EntityType="NotiOfimaModel.MTPAI" />
+        </EntityContainer>
+        <EntityType Name="NotiOfimaConfiguracion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="FrecuenciaMostrar" Type="Int32" Nullable="false" />
+          <Property Name="UltimaEjecucion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="id" Type="Guid" Nullable="false" />
+          <Property Name="tiempoInactivo" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MTPAI">
+          <Key>
+            <PropertyRef Name="CODIGO" />
+          </Key>
+          <Property Name="CODIGO" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="DESCRIPCIO" Type="String" MaxLength="60" FixedLength="true" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NotiOfimaModelStoreContainer" CdmEntityContainer="NotiOfimaEntities">
+          <EntitySetMapping Name="NotiOfimaDatos">
+            <EntityTypeMapping TypeName="NotiOfimaModel.NotiOfimaDatos">
+              <MappingFragment StoreEntitySet="NotiOfima">
+                <ScalarProperty Name="CodigoPais" ColumnName="CodigoPais" />
+                <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+                <ScalarProperty Name="CantidadMostrar" ColumnName="CantidadMostrar" />
+                <ScalarProperty Name="FechaExpiracion" ColumnName="FechaExpiracion" />
+                <ScalarProperty Name="FrecuenciaMostrar" ColumnName="FrecuenciaMostrar" />
+                <ScalarProperty Name="idNota" ColumnName="idNota" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NotiOfimaConfiguracions">
+            <EntityTypeMapping TypeName="NotiOfimaModel.NotiOfimaConfiguracion">
+              <MappingFragment StoreEntitySet="NotiOfimaConfiguracion">
+                <ScalarProperty Name="tiempoInactivo" ColumnName="tiempoInactivo" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="UltimaEjecucion" ColumnName="UltimaEjecucion" />
+                <ScalarProperty Name="FrecuenciaMostrar" ColumnName="FrecuenciaMostrar" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MTPAIS">
+            <EntityTypeMapping TypeName="NotiOfimaModel.MTPAI">
+              <MappingFragment StoreEntitySet="MTPAIS">
+                <ScalarProperty Name="DESCRIPCIO" ColumnName="DESCRIPCIO" />
+                <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Predeterminado" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram DiagramId="6ea76eb8a95d4c1c9f55b626b5b6e5f0" Name="Diagram1">
+        <EntityTypeShape EntityType="NotiOfimaModel.NotiOfimaDatos" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NotiOfimaModel.NotiOfimaConfiguracion" Width="1.5" PointX="2.375" PointY="1.375" />
+        <EntityTypeShape EntityType="NotiOfimaModel.MTPAI" Width="1.5" PointX="4" PointY="1.375" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

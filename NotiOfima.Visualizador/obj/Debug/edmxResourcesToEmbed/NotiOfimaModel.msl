@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NotiOfimaModelStoreContainer" CdmEntityContainer="NotiOfimaEntities">
+    <EntitySetMapping Name="NotiOfimaDatos">
+      <EntityTypeMapping TypeName="NotiOfimaModel.NotiOfimaDatos">
+        <MappingFragment StoreEntitySet="NotiOfima">
+          <ScalarProperty Name="CantidadMostrar" ColumnName="CantidadMostrar" />
+          <ScalarProperty Name="FechaExpiracion" ColumnName="FechaExpiracion" />
+          <ScalarProperty Name="FrecuenciaMostrar" ColumnName="FrecuenciaMostrar" />
+          <ScalarProperty Name="idNota" ColumnName="idNota" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

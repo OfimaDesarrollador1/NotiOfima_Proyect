@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo es utilizado por el proceso de paquete/publicación de nuestro proyecto Web. Puede personalizar el comportamiento de este proceso
+editando este archivo MSBuild. Para conocer más acerca de esto, visite http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Ofimatica\OfimaSISPublicacion\NotiOfima</_PublishTargetUrl>
+    <History>True|2023-01-12T15:47:47.9476836Z;True|2022-12-19T10:53:09.1092415-05:00;True|2022-12-09T09:20:52.7791161-05:00;True|2022-12-09T09:19:30.5494600-05:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/NotiOfima.Entidades.dll">
+      <publishTime>01/12/2023 10:47:47</publishTime>
+    </File>
+    <File Include="bin/NotiOfima.Entidades.dll.config">
+      <publishTime>12/01/2022 16:06:26</publishTime>
+    </File>
+    <File Include="bin/NotiOfima.Entidades.pdb">
+      <publishTime>01/12/2023 10:47:47</publishTime>
+    </File>
+    <File Include="bin/NotiOfima.WebService.dll">
+      <publishTime>01/12/2023 10:47:47</publishTime>
+    </File>
+    <File Include="bin/NotiOfima.WebService.pdb">
+      <publishTime>01/12/2023 10:47:47</publishTime>
+    </File>
+    <File Include="ServiceNotiOfima.svc">
+      <publishTime>09/02/2015 08:24:48</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>12/01/2022 15:21:52</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

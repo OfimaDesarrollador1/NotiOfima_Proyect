@@ -1,0 +1,13 @@
+C:\SourceCode\OfimaNotiOfima\Dev\Dev\NotiOfima.Visualizador\bin\Release\NotiOfima.Visualizador.exe.config
+C:\SourceCode\OfimaNotiOfima\Dev\Dev\NotiOfima.Visualizador\bin\Release\NotiOfima.Visualizador.exe
+C:\SourceCode\OfimaNotiOfima\Dev\Dev\NotiOfima.Visualizador\bin\Release\NotiOfima.Visualizador.pdb
+C:\SourceCode\OfimaNotiOfima\Dev\Dev\NotiOfima.Visualizador\bin\Release\WebKit.Interop.dll
+C:\SourceCode\OfimaNotiOfima\Dev\Dev\NotiOfima.Visualizador\bin\Release\WebKitBrowser.dll
+C:\SourceCode\OfimaNotiOfima\Dev\Dev\NotiOfima.Visualizador\obj\Release\Ofima.Estructuras.Analisis.Interfaz.Footer.resources
+C:\SourceCode\OfimaNotiOfima\Dev\Dev\NotiOfima.Visualizador\obj\Release\Ofima.Estructuras.Analisis.Interfaz.Header.resources
+C:\SourceCode\OfimaNotiOfima\Dev\Dev\NotiOfima.Visualizador\obj\Release\NotiOfima.Visualizador.FrmNotiOfima.resources
+C:\SourceCode\OfimaNotiOfima\Dev\Dev\NotiOfima.Visualizador\obj\Release\NotiOfima.Visualizador.Properties.Resources.resources
+C:\SourceCode\OfimaNotiOfima\Dev\Dev\NotiOfima.Visualizador\obj\Release\NotiOfima.Visualizador.csproj.GenerateResource.Cache
+C:\SourceCode\OfimaNotiOfima\Dev\Dev\NotiOfima.Visualizador\obj\Release\NotiOfima.Visualizador.exe.licenses
+C:\SourceCode\OfimaNotiOfima\Dev\Dev\NotiOfima.Visualizador\obj\Release\NotiOfima.Visualizador.exe
+C:\SourceCode\OfimaNotiOfima\Dev\Dev\NotiOfima.Visualizador\obj\Release\NotiOfima.Visualizador.pdb

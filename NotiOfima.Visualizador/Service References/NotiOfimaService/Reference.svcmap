@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ed1aa54d-0bb5-4342-b17a-ae6288bf98b9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:65426/ServiceNotiOfima.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceNotiOfima3.xsd" MetadataType="Schema" ID="3eb3bd59-b20b-428f-8bd4-ab4a5450ef55" SourceId="1" SourceUrl="http://localhost:65426/ServiceNotiOfima.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceNotiOfima1.wsdl" MetadataType="Wsdl" ID="db3084ce-171c-4f5d-8b3f-5fad52cdfc9b" SourceId="1" SourceUrl="http://localhost:65426/ServiceNotiOfima.svc?wsdl" />
+    <MetadataFile FileName="ServiceNotiOfima1.disco" MetadataType="Disco" ID="8c5f0a86-e655-4967-b34d-3147b2f866de" SourceId="1" SourceUrl="http://localhost:65426/ServiceNotiOfima.svc?disco" />
+    <MetadataFile FileName="ServiceNotiOfima31.xsd" MetadataType="Schema" ID="fcbf9af3-d832-4e9e-9f5e-439a71bf6c81" SourceId="1" SourceUrl="http://localhost:65426/ServiceNotiOfima.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceNotiOfima32.xsd" MetadataType="Schema" ID="2b86dbaa-a613-47dc-8d32-581171148334" SourceId="1" SourceUrl="http://localhost:65426/ServiceNotiOfima.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
